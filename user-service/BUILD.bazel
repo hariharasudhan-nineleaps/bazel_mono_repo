@@ -6,7 +6,7 @@ py_binary(
     srcs = ["main.py"],
     main = "main.py",
     deps = [
-        #requirement("uvicorn"),
-        #requirement("fastapi")
+        requirement("uvicorn"),
+        requirement("fastapi")
     ]
 )
