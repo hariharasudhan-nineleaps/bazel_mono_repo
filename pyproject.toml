@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "bazel-mono-repo"
+version = "0.1.0"
+description = ""
+authors = ["Hariharasudhan <hari@nineleaps.com>"]
+readme = "README.md"
+packages = [{include = "bazel_mono_repo"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+psycopg2 = "^2.9.6"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.23.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

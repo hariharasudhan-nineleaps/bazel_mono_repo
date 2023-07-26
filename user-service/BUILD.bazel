@@ -7,6 +7,7 @@ py_binary(
     main = "main.py",
     deps = [
         requirement("uvicorn"),
-        requirement("fastapi")
+        requirement("fastapi"),
+        requirement("psycopg2")
     ]
 )

@@ -6,6 +6,7 @@ go_binary(
         "main.go"
     ],
     deps = [
-        "@com_github_gin_gonic_gin//:go_default_library"
+        "@com_github_gin_gonic_gin//:go_default_library",
+        "//shared:shared_deps"
     ]
 )
