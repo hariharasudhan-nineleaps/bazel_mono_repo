@@ -1,0 +1,32 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_test", "py_library")
+load("@app_deps//:requirements.bzl", "requirement")
+
+
+py_library(
+    name = "user_service",
+    srcs = ["app.py"],
+    visibility = ["//visibility:public"]
+)
+
+py_binary(
+    name = "user_service_binary",
+    srcs = ["main.py"],
+    main = "main.py",
+    deps = [
+        ":user_service",
+        requirement("uvicorn"),
+        requirement("fastapi")
+    ]
+)
+
+py_test(
+    name = "user_service_test",
+    srcs = ["test_app.py"],
+    main = "test_app.py",
+    deps = [
+        ":user_service",
+        requirement("fastapi"),
+        requirement("pytest"),
+        requirement("httpx")
+    ]
+)

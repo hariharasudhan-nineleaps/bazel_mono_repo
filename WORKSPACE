@@ -36,6 +36,7 @@ load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 python_register_toolchains(
     name = "python3_11",
     python_version = "3.11",
+    register_coverage_tool = True,
 )
 
 # install pip packages with toolchain

@@ -8,9 +8,11 @@ packages = [{include = "bazel_mono_repo"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-psycopg2 = "^2.9.6"
 fastapi = "^0.100.0"
 uvicorn = {extras = ["standard"], version = "^0.23.1"}
+psycopg2-binary = "^2.9.6"
+pytest = "^7.4.0"
+httpx = "^0.24.1"
 
 
 [build-system]
